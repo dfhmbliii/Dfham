@@ -22,7 +22,6 @@
 
             // Buatlah perkondisian dimana:
             if (mysqli_num_rows($result) > 0) {
-                // 1. Apabila ada data dalam database
                 echo "<table border='1'>
                         <tr>
                             <th>Nama Mobil</th>
@@ -33,11 +32,10 @@
                             <th>Action</th>
                         </tr>";
 
-                // Loop through the data and display it in a table
+          
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>
                             <td>{$row['nama_mobil']}</td>
-                            
                             <td>{$row['brand_mobil']}</td>
                             <td>{$row['warna_mobil']}</td>
                             <td>{$row['tipe_mobil']}</td>
@@ -48,11 +46,11 @@
 
                 echo "</table>";
             } else {
-                // 2. Apabila tidak ada data dalam database
+         
                 echo "Tidak ada data dalam tabel.";
             }
 
-            // Close the database connection
+       
             mysqli_close($connect);
             ?>
         </div>
