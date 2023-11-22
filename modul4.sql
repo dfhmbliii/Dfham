@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3308
--- Generation Time: Oct 31, 2023 at 06:30 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Host: 127.0.0.1
+-- Generation Time: Nov 17, 2023 at 02:37 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,32 +18,31 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `modul3_wad`
+-- Database: `modul4`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `showroom_mobil`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `showroom_mobil` (
-  `id` int(255) NOT NULL,
-  `nama_mobil` varchar(255) NOT NULL,
-  `brand_mobil` varchar(255) NOT NULL,
-  `warna_mobil` varchar(255) NOT NULL,
-  `tipe_mobil` varchar(255) NOT NULL,
-  `harga_mobil` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `users` (
+  `id` int(12) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `showroom_mobil`
+-- Indexes for table `users`
 --
-ALTER TABLE `showroom_mobil`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -51,10 +50,10 @@ ALTER TABLE `showroom_mobil`
 --
 
 --
--- AUTO_INCREMENT for table `showroom_mobil`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `showroom_mobil`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
